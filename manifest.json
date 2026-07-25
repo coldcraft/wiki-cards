@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Wiki Cards",
+  "version": "1.0.0",
+  "description": "Highlight text on Wikipedia, right-click, get a Genius-style lyric card copied to your clipboard.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "wiki-cards@tallman",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": [
+    "contextMenus",
+    "clipboardWrite",
+    "*://*.wikipedia.org/*",
+    "*://*.wikimedia.org/*"
+  ],
+  "background": {
+    "scripts": ["card.js", "background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.wikipedia.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
