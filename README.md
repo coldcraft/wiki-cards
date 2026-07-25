@@ -35,19 +35,19 @@ a share-ready card is on your clipboard. Paste it into any chat.
 
 ## Install
 
-**From source (any Firefox):** `about:debugging#/runtime/this-firefox` →
-**Load Temporary Add-on…** → pick `manifest.json`. Unloads on restart.
+**Signed build (recommended):** grab the `.xpi` from the
+[latest release](https://github.com/coldcraft/wiki-cards/releases/latest),
+then `about:addons` → gear icon → **Install Add-on From File…** (or click the
+`.xpi` link in Firefox and approve the prompt). Note: releases don't
+auto-update — check back for new versions.
 
-**Permanent:** zip the four extension files and submit to
+**From source (for hacking):** `about:debugging#/runtime/this-firefox` →
+**Load Temporary Add-on…** → pick `manifest.json`. Unloads on restart. For
+your own permanent build, zip the four extension files and submit to
 [addons.mozilla.org](https://addons.mozilla.org/developers/) as
 self-distributed/unlisted — automated validation signs an installable `.xpi`
-in minutes:
-
-```
-Compress-Archive -Path manifest.json,card.js,background.js,content.js -DestinationPath dist\wiki-cards.zip
-```
-
-Then `about:addons` → gear → **Install Add-on From File…**
+in minutes (change the `gecko.id` in the manifest first, since each add-on ID
+can only be signed by one AMO account).
 
 ## How it works
 
