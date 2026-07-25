@@ -6,9 +6,9 @@ Highlight a passage on any Wikipedia article → right-click → **Make Wiki car
 a share-ready card is on your clipboard. Paste it into any chat.
 
 <p align="center">
-  <img src="docs/card-chicago.png" width="32%" alt="Short-selection card: Chicago skyline">
-  <img src="docs/card-tesla.png" width="32%" alt="Dense-paragraph card with image strip: Nikola Tesla">
-  <img src="docs/card-heading.png" width="32%" alt="Section-heading label card: Date and time notation in Japan">
+  <img src="docs/card-blackjoke.png" width="32%" alt="Dense-paragraph card: HMS Black Joke over a painting of the ship">
+  <img src="docs/card-molasses.png" width="32%" alt="Short-selection card: Great Molasses Flood over a photo of the aftermath">
+  <img src="docs/card-wojtek.png" width="32%" alt="Card: Wojtek the soldier bear over a photo of the bear with a Polish soldier">
 </p>
 
 ## What it does
