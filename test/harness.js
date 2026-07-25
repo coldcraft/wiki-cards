@@ -37,9 +37,12 @@ function show(label, data) {
     extraImages: [chiImg, jazzImg].filter(Boolean)
   });
 
+  // First sentence only — boundary requires a capital after the period so
+  // abbreviations like "U.S. state" don't cut the sentence short.
+  const firstSentence = chicago.extract.match(/^.*?[.!?](?=\s+[A-Z“"])/);
   show("short sentence + landscape bg", {
     title: chicago.title,
-    text: chicago.extract.split(". ").slice(0, 1).join(". ") + ".",
+    text: firstSentence ? firstSentence[0] : chicago.extract,
     bgImage: chiImg,
     extraImages: []
   });
